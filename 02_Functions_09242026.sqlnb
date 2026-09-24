@@ -1,0 +1,47 @@
+-- Converts text to uppercase.
+-- select first_name,upper(first_name) as upper_name from hr.employees
+
+-- Converts text to lowercase.
+-- select first_name,lower(first_name) as lower_name from hr.employees
+
+-- Capitalizes the first letter of each word.
+-- select first_name,initcap(first_name) as proper_name from hr.employees
+
+--Returns the number of characters.
+-- select first_name,length(first_name) as name_length from hr.employees
+
+-- Extracts part of a string.
+-- select first_name,substr(first_name,1,5) as chars from hr.employees
+
+-- Returns the position of a substring.
+-- SELECT first_name, INSTR(first_name, 'a') AS position_of_a FROM hr.employees;
+
+-- Joins two strings.
+-- select first_name,concat(FIRST_NAME,LAST_NAME) AS full_name FROM hr.EMPLOYEES
+
+-- `||` joins multiple text values and separators.
+-- select first_name,FIRST_NAME || ' ' || LAST_NAME as full_name from hr.EMPLOYEES
+
+-- ## 9. REPLACE
+-- Replaces matching text.
+-- select first_name,REPLACE(first_name, 'a','@') as replaced_name from hr.employees
+
+-- ## 10. TRIM-Removes leading/trailing spaces or a specified character.
+-- select trim(  'oracle sql   ')  as trim_word from dual
+
+-- ## 11. LTRIM / RTRIM-Removes characters from the left or right.
+-- SELECT LTRIM('000123','0') AS left_trimmed, RTRIM('ABCxxx','x') AS right_trimmed FROM dual;
+
+-- ## 12. LPAD / RPAD-Pads text to a requested length.
+-- select first_name,lpad(first_name,15,'*') as left_pad ,rpad(first_name,20,'*') as right_pad from hr.employees
+
+-- ## 13. Business Filter with LIKE
+-- Find employees whose first name starts with `S`.
+-- select first_name,last_name from hr.employees where first_name like 'S%' 
+
+-- ## 14. Nested Character Functions
+-- Functions can be nested to transform and measure values.
+-- select first_name,upper(first_name) as upper_name,lower(last_name) as lower_name,length(trim(first_name)) as clean_length,trim(lpad(first_name,15,'*')) as trim_pad_name from hr.employees
+
+
+
