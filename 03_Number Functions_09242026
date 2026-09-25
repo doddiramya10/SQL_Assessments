@@ -1,0 +1,79 @@
+-- ## 1. ROUND
+
+-- Rounds a number to a specified decimal position.
+-- select salary,round(salary/12,2) as monthly_salary from hr.employees
+
+-- ## 2. TRUNC Number
+
+-- Cuts off decimal digits without rounding.
+-- select salary,trunc(salary/12,2) as monthly_salary from hr.employees
+
+-- ## 3. CEIL
+
+-- Returns the smallest integer greater than or equal to a number.
+-- select ceil(10.2) as ceil_value from dual
+
+-- ## 4. FLOOR
+
+-- Returns the largest integer less than or equal to a number.
+-- select floor(10.2) as floor_value from dual
+
+-- ## 5. ABS
+
+-- Returns the absolute value.
+-- select round(abs(-250.666),2) as rounded_abs from dual
+
+-- ## 6. MOD
+
+-- Returns the remainder after division.
+-- select mod(10,3) as reminder from dual
+
+-- ## 7. POWER
+
+-- Raises a number to a power.
+-- select power(2,3) as power_value from dual
+
+-- ## 8. SQRT
+
+-- Returns the square root.
+-- select sqrt(25) as square_value from dual
+
+-- ## 9. SIGN
+
+-- Returns -1, 0, or 1 depending on the sign of a number.
+-- select sign(-25) as negative_sign,sign(0) as zero_sign ,sign(25) as positive_sign from dual
+
+-- ## 10. Salary Increase
+
+-- Business use: calculate a proposed percentage increase.
+-- select salary,salary*1.10 as salary_after_increment from hr.employees
+
+-- ## 11. Annual Salary
+
+-- Business use: calculate annualized salary.
+-- select first_name,salary,salary*12 as annual_salary from hr.employees
+
+-- ## 12. Commission Calculation
+-- Business use: calculate commission while handling NULL values.
+-- select first_name,salary,commission_pct,salary * NVL(commission_pct,0) as comimission_amount from hr.employees
+
+-- ## 13. Aggregate Numeric Functions
+
+-- SUM, AVG, MIN and MAX summarize numeric data.
+select department_id ,sum(salary) as total_salary,avg(salary) as average_Salary,min(salary) as minimum_salary,max(salary) as maximum_salary from hr.employees group by DEPARTMENT_ID ORDER by DEPARTMENT_ID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
